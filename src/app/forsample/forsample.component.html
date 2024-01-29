@@ -1,0 +1,38 @@
+<p class="lead">This is for for one array 1,2,3,4,5,6 </p>
+<ul>
+    @for (data of array_numbers; track data) 
+    {
+    <li>---{{data}}---</li>
+    }
+    
+</ul>
+<p class="lead">Name Character Split </p>
+<ul>
+    @for(char of name_string;track char)
+    {
+        <li>--{{char}} -- </li>
+    }
+</ul>
+<p class="lead">Name Character Split empty demo </p>
+<ul>
+    @for(char of name_string1;track char)
+    {
+        <li>--{{char}} -- </li>
+    }
+    @empty 
+    {
+        <li>List is empty</li>
+    }
+</ul>
+<p class="lead" >Table generator </p>
+<input type="text" #inputbox>
+<button (click)="mutiplicationgen(inputbox.value)">Click me</button>
+
+<ul>
+   
+    @for(product of result;track product;let i= $index;)
+    { 
+        
+        <li>{{inputbox.value}}X{{i+1}}=={{product}}</li>
+    }
+</ul>
