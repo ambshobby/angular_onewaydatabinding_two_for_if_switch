@@ -36,3 +36,24 @@
         <li>{{inputbox.value}}X{{i+1}}=={{product}}</li>
     }
 </ul>
+<hr/>
+<p class="lead" >Table till </p>
+<input type="text" #inputbox1>
+<button (click)="multitill(inputbox1.value)">Click for till</button>
+
+<ul>
+   
+    @for(product of result1;track product;let i= $index;)
+    { 
+        <li>{{product}}</li>
+        <!-- <li>{{product[i]}} </li>
+        <ul>
+        @for(data of product[i];track data;let j=$index)
+        {
+           <li>{{data}}</li> 
+        } -->
+    <!-- </ul> -->
+        
+    }
+</ul>
+<hr/>

@@ -14,11 +14,27 @@ export class ForsampleComponent
   name_string1="";
   
   result:any=[];
+  result1:any=[];
   mutiplicationgen(x:any)
   {
     for(let i=1;i<11;i++)
     { 
       this.result.push(i*x)
+    }
+  }
+
+  multitill(till:any)
+  {
+    for(let x=1;x<=till;x++)
+    {
+      let temp=[];
+      
+      for(let i=1;i<11;i++)
+      { 
+        temp.push(i*x);
+        
+      }
+      this.result1.push([temp])
     }
   }
   
